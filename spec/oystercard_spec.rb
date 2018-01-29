@@ -42,6 +42,24 @@ describe Oystercard do
       expect(subject.balance).to eq(10)
     end
 
+  end
+
+  context "#touch_in" do
+
+    it "sets in journey status to true" do
+      subject.touch_in
+      expect(subject.in_journey).to eq true
+    end
+
+  end
+
+  context "#touch_out" do
+
+    it "sets in journey status to false" do
+      subject.touch_in
+      subject.touch_out
+      expect(subject.in_journey).to eq false
+    end
 
   end
 
