@@ -11,8 +11,10 @@ describe Oystercard do
   end
 
   context "#top_up" do
-
-      it { is_expected.to respond_to(:top_up) }
+      it "adds the amount to balance" do
+        subject.top_up(10)
+        expect(subject.balance).to eq(10)
+      end
 
   end
 
