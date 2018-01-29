@@ -25,4 +25,12 @@ describe Oystercard do
 
   end
 
+  context "#deduct" do
+
+    it "deducts the amount from the balance" do
+      subject.deduct(10)
+      expect(subject.balance).to eq(-10)
+    end
+  end
+
 end
