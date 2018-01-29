@@ -8,6 +8,10 @@ describe Oystercard do
       expect(subject.balance).to eq(0)
     end
 
+    it "initializes as not in journey" do
+      expect(subject.in_journey).to eq(false)
+    end
+
   end
 
   context "#top_up" do
