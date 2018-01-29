@@ -31,6 +31,14 @@ describe Oystercard do
       subject.deduct(10)
       expect(subject.balance).to eq(-10)
     end
+
+    it "deducts the amount from the balance" do
+      subject.top_up(20)
+      subject.deduct(10)
+      expect(subject.balance).to eq(10)
+    end
+
+
   end
 
 end
